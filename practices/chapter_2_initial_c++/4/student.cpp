@@ -1,6 +1,5 @@
 #include<iostream>
 #include "student.h"
-#include<string>
 using namespace std;
 void Student::display(){
   cout<<"num is "<<num<<endl;
