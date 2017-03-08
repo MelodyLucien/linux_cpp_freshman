@@ -10,6 +10,9 @@ package com.hisense.motionkit;
  */
 public class MotionMonitorController {
 
+	//use for native callback
+	private static Object o;
+
 	private MotionMonitorController() {
 	}
 
@@ -17,6 +20,11 @@ public class MotionMonitorController {
 	
 	static {
 		System.loadLibrary("motion");
+	}
+
+	//native callback
+	private static  void notifyMotionEvent(){
+		  System.out.println("notify motion event!!");
 	}
 
 	private static native void startMonitor();
