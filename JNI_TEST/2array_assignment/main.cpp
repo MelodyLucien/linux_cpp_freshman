@@ -45,5 +45,17 @@ JNIEXPORT void JNICALL Java_com_zhouhao2_debug_Test_initArray
   env->SetStaticObjectField(cls,obj,result);
 //  jmethodID mid=env->GetStaticMethodID(cls,"printOutArray","()V");
  // env->CallStaticVoidMethod(cls,mid);
+
+  //getConfiguration from java layer
+  //jfieldID obj1= env->GetStaticFieldID(cls,"configuration","Lcom/zhouhao2/debug/CustomConfiguration;");
+  //jobject  configuration = env->GetStaticObjectField(cls,obj1);
+  jclass conCls = env->FindClass("com/zhouhao2/debug/CustomConfiguration");
+  if(conCls == NULL){
+     cout << "conCls == null"<<endl;
+  }else{
+     jfieldID  pointerGestureTapInterval = env->GetStaticFieldID(conCls,"pointerGestureTapInterval","F");
+     jfloat value = env->GetStaticFloatField(conCls,pointerGestureTapInterval);
+     cout << "pointerGestureTapInterval: " << value<<endl;
+  }
 }
 
