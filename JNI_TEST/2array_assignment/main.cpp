@@ -6,6 +6,33 @@ JNIEnv * mGlobalEnv;
 
 jclass mGlobalCls;
 
+/*
+ * Class:     com_zhouhao2_debug_Test
+ * Method:    setConfiguration
+ * Signature: (Lcom/zhouhao2/debug/CustomConfiguration;)V
+ */
+JNIEXPORT void JNICALL Java_com_zhouhao2_debug_Test_setConfiguration
+  (JNIEnv * env, jclass, jobject obj){
+
+     jclass conCls = env->GetObjectClass(obj);
+
+     jfieldID  field = env->GetStaticFieldID(conCls,"pointerGestureQuietInterval","I");
+     jint value = env->GetStaticFloatField(conCls,field);
+
+     field = env->GetStaticFieldID(conCls,"pointerGestureTapInterval","F");
+     jfloat value1= env->GetStaticFloatField(conCls,field);
+
+
+
+
+
+     cout << "pointerGestureQuietInterval: " << value<<endl;
+     cout << "i am fine ,i am ok"<<endl;
+
+     cout << "pointerGestureDragMinSwitchSpeed "<<value1<<endl;
+
+}
+
 JNIEXPORT void JNICALL Java_com_zhouhao2_debug_Test_initArray
 (JNIEnv * env, jclass cls){
   mGlobalEnv=env;
@@ -49,6 +76,7 @@ JNIEXPORT void JNICALL Java_com_zhouhao2_debug_Test_initArray
   //getConfiguration from java layer
   //jfieldID obj1= env->GetStaticFieldID(cls,"configuration","Lcom/zhouhao2/debug/CustomConfiguration;");
   //jobject  configuration = env->GetStaticObjectField(cls,obj1);
+/*
   jclass conCls = env->FindClass("com/zhouhao2/debug/CustomConfiguration");
   if(conCls == NULL){
      cout << "conCls == null"<<endl;
@@ -57,5 +85,6 @@ JNIEXPORT void JNICALL Java_com_zhouhao2_debug_Test_initArray
      jfloat value = env->GetStaticFloatField(conCls,pointerGestureTapInterval);
      cout << "pointerGestureTapInterval: " << value<<endl;
   }
+*/
 }
 

@@ -9,6 +9,14 @@ extern "C" {
 #endif
 /*
  * Class:     com_zhouhao2_debug_Test
+ * Method:    setConfiguration
+ * Signature: (Lcom/zhouhao2/debug/CustomConfiguration;)V
+ */
+JNIEXPORT void JNICALL Java_com_zhouhao2_debug_Test_setConfiguration
+  (JNIEnv *, jclass, jobject);
+
+/*
+ * Class:     com_zhouhao2_debug_Test
  * Method:    initArray
  * Signature: ()V
  */
