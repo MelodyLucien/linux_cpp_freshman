@@ -86,5 +86,19 @@ JNIEXPORT void JNICALL Java_com_zhouhao2_debug_Test_initArray
      cout << "pointerGestureTapInterval: " << value<<endl;
   }
 */
+  //getConfiguration from java layer
+  jfieldID b1= env->GetStaticFieldID(cls,"isStop","Z");
+  jboolean isStop=env->GetStaticBooleanField(cls,b1);
+
+  if(isStop){
+     cout<<"isStop:  "<<"true"<<endl;
+     return;
+  }
+
+ 
+
+  cout<<"isStop:  "<<"false"<<endl;
+ 
 }
+
 
