@@ -1,5 +1,8 @@
 #ifndef START_MANAGER
 #define START_MANAGER
+#include "InputDispatcher.h"
+#include "InputReader.h"
+
 class StartManager {
    public:
    	void start();
@@ -7,6 +10,9 @@ class StartManager {
     void init();
     StartManager();
     ~StartManager();
+   private:
+   	InputDispatcher * mInputDispatcher;
+   	InputReader * mInputReader;
 };
 
 #endif

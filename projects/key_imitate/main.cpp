@@ -17,13 +17,15 @@ void* say_hello(void* args)
 
 /**
 
-cmd to compile :  g++ -o test StartManager.cpp main.cpp -lpthread
+cmd to compile :   g++ -o test StartManager.cpp main.cpp InputReader.cpp InputDispatcher.cpp -lpthread
 
 **/
 
 int main()
 {
 	StartManager startmanager;
+	startmanager.init();
+	startmanager.start();
     // 定义线程的 id 变量，多个变量使用数组
     pthread_t tids[NUM_THREADS];
     for(int i = 0; i < NUM_THREADS; ++i)
