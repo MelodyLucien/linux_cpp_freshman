@@ -16,9 +16,7 @@ void* say_hello(void* args)
 
 
 /**
-
 cmd to compile :   g++ -o test StartManager.cpp main.cpp InputReader.cpp InputDispatcher.cpp -lpthread
-
 **/
 
 int main()
