@@ -1,5 +1,8 @@
 #ifndef INPUT_READER
 #define INPUT_READER
+#include <string>
+
+using namespace std;
 class InputReader {
 
 public:
@@ -8,8 +11,8 @@ public:
     InputReader();
     ~InputReader();
 private:
-	    void dispatch();
-	    
+	   static void dispatch(string str);
+
 };
 
 #endif

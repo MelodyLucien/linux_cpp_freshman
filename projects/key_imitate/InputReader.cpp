@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <string>
 #include <time.h>
 #include <errno.h>
 #include <poll.h>
@@ -27,8 +28,8 @@ InputReader::~InputReader(void){
 }
 
 
-void InputReader::dispatch(){
-       cout<<"dispatch keys to InputDispatcher"<<endl;
+void InputReader::dispatch(string str){
+       cout<<"dispatch  --"<<str.replace(str.find("\r"),1,"")<<"--  to InputDispatcher"<<endl;
 }
 
 
@@ -93,7 +94,7 @@ void* InputReader::loop(void * args){
 	       // make buff end with \0 ,so that we can output the string
 	       buf[real_read] = '\0';
 	       printf("read from fd %d and the content is %s\n",i, buf);
-	       this.dispatch();
+	       dispatch(buf);
 	      }
 	     } /* end of if real_read*/
 	    } /* end of if revents */
