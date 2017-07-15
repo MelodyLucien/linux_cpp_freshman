@@ -29,7 +29,7 @@ InputReader::~InputReader(void){
 
 
 void InputReader::dispatch(string str){
-       cout<<"dispatch  --"<<str.replace(str.find("\r"),1,"")<<"--  to InputDispatcher"<<endl;
+       cout<<"dispatch  --"<<str.replace(str.find_first_of("\n"),1,"")<<"--  to InputDispatcher"<<endl;
 }
 
 
