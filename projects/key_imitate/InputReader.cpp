@@ -5,11 +5,11 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-#include <string>
 #include <time.h>
 #include <errno.h>
 #include <poll.h>
 #include "InputReader.h"
+#include "InputDispatcher.h"
 
 
 #define MAX_BUFFER_SIZE  1024  //  the maximum of buffer size
@@ -18,7 +18,8 @@
 using namespace std;
 
 
-InputReader::InputReader(void){
+InputReader::InputReader(InputDispatcher* inputDispatcher){
+	mInputDispatcher = inputDispatcher;
    cout <<"InputReader construct()" << endl;
 }
 
@@ -29,7 +30,8 @@ InputReader::~InputReader(void){
 
 
 void InputReader::dispatch(string str){
-       cout<<"dispatch  --"<<str.replace(str.find_first_of("\n"),1,"")<<"--  to InputDispatcher"<<endl;
+       cout<<"InputReader  --"<<"dispatch" <<"--  to InputDispatcher"<<endl;
+       mInputDispatcher->onDispatch(str.replace(str.find_first_of("\n"),1,""));
 }
 
 

@@ -1,4 +1,5 @@
 #include "InputDispatcher.h"
+#include <string.h>
 #include <iostream>
 using namespace std;
 
@@ -13,6 +14,17 @@ InputDispatcher::~InputDispatcher(void){
 void* InputDispatcher::loop(void * args){
    	cout<<"InputDispatcher: "<<"i am looping "<<endl;
 }
+
+void InputDispatcher::onDispatch(string keycode){
+   	cout<<"InputDispatcher: "<<"onDispatch"<< keycode <<endl;
+
+   	dispatchToApp();
+}
+
+void InputDispatcher::dispatchToApp(){
+   	cout<<"InputDispatcher: "<<"dispatchToApp "<<endl;
+}
+
 void InputDispatcher::start(){
    		cout<<"InputDispatcher: "<<"start "<<endl;
          // 定义线程的 id 变量，多个变量使用数组

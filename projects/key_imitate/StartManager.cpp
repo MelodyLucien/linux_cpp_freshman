@@ -23,8 +23,8 @@ void StartManager::stop(){
 
 
 void StartManager::init(){
-	mInputReader = new InputReader();
 	mInputDispatcher = new InputDispatcher();
+    mInputReader = new InputReader(mInputDispatcher);
    cout <<"init()" << endl;
 }
 

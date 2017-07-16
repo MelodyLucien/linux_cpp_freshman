@@ -1,6 +1,7 @@
 #ifndef INPUT_READER
 #define INPUT_READER
 #include <string>
+#include "InputDispatcher.h"
 
 using namespace std;
 class InputReader {
@@ -8,10 +9,11 @@ class InputReader {
 public:
    	static void* loop(void *);
    	void start();
-    InputReader();
+    InputReader(InputDispatcher* inputDispatcher);
     ~InputReader();
 private:
-	   static void dispatch(string str);
+	static InputDispatcher* mInputDispatcher;
+	static void dispatch(string str);
 
 };
 
