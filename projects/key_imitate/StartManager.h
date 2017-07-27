@@ -11,8 +11,7 @@ class StartManager {
     StartManager();
     ~StartManager();
    private:
-   	InputDispatcher * mInputDispatcher;
-   	InputReader * mInputReader;
+   	InputReader* mInputReader;
 };
 
 #endif
