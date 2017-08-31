@@ -18,8 +18,8 @@
 using namespace std;
 
 
-InputReader::InputReader(InputDispatcher* inputDispatcher){
-	mInputDispatcher = inputDispatcher;
+InputReader::InputReader(){
+	mInputDispatcher = new InputDispatcher();
    cout <<"InputReader construct()" << endl;
 }
 

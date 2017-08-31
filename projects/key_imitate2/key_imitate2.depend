@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1500455522 source:/home/zhouhao2/myGit/linux_cpp_freshman/projects/key_imitate2/InputDispatcher.cpp
+	"InputDispatcher.h"
+	<string.h>
+	<iostream>
+
+1500455522 /home/zhouhao2/myGit/linux_cpp_freshman/projects/key_imitate2/InputDispatcher.h
+	<string>
+
+1500455522 source:/home/zhouhao2/myGit/linux_cpp_freshman/projects/key_imitate2/InputReader.cpp
+	<pthread.h>
+	<iostream>
+	<fcntl.h>
+	<stdio.h>
+	<unistd.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<errno.h>
+	<poll.h>
+	"InputReader.h"
+	"InputDispatcher.h"
+
+1500455522 /home/zhouhao2/myGit/linux_cpp_freshman/projects/key_imitate2/InputReader.h
+	<string>
+	"InputDispatcher.h"
+
+1500455522 source:/home/zhouhao2/myGit/linux_cpp_freshman/projects/key_imitate2/main.cpp
+	<iostream>
+	<pthread.h>
+	"StartManager.h"
+
+1500455522 /home/zhouhao2/myGit/linux_cpp_freshman/projects/key_imitate2/StartManager.h
+	"InputDispatcher.h"
+	"InputReader.h"
+
+1500455522 source:/home/zhouhao2/myGit/linux_cpp_freshman/projects/key_imitate2/StartManager.cpp
+	"StartManager.h"
+	<iostream>
+
+1500455522 source:/home/zhouhao2/myGit/linux_cpp_freshman/projects/key_imitate2/teststr.cpp
+	<string>
+	<iostream>
+

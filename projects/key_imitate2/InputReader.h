@@ -1,7 +1,7 @@
 #ifndef INPUT_READER
 #define INPUT_READER
-#include <string>
-#include "InputDispatcher.h"
+#include<string>
+#include"InputDispatcher.h"
 
 using namespace std;
 class InputReader {

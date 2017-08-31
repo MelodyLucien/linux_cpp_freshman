@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1504166173 source:/home/zhouhao2/myGit/linux_cpp_freshman/projects/key_imitate/initdemo/main.cpp
+	<iostream>
+	<sys/types.h>
+	<sys/stat.h>
+	<sys/mount.h>
+

@@ -11,5 +11,4 @@ class InputDispatcher {
     void onDispatch(string keyevent);
     void dispatchToApp();
 };
-
 #endif
