@@ -12,13 +12,13 @@ InputDispatcher::~InputDispatcher(void){
 }
 
 void* InputDispatcher::loop(void * args){
-   	cout<<"InputDispatcher: "<<"i am looping "<<endl;
+   cout<<"InputDispatcher: "<<"i am looping "<<endl;
 }
 
 void InputDispatcher::onDispatch(string keycode){
-   	cout<<"InputDispatcher: "<<"onDispatch"<< keycode <<endl;
+   cout<<"InputDispatcher: "<<"onDispatch"<< keycode <<endl;
 
-   	dispatchToApp();
+   dispatchToApp();
 }
 
 void InputDispatcher::dispatchToApp(){

@@ -17,15 +17,11 @@
 #define TIME_DELAY   6000    //the time delay by millsecond
 using namespace std;
 
-
-InputReader::InputReader(){
-	mInputDispatcher = new InputDispatcher();
-   cout <<"InputReader construct()" << endl;
-}
+InputDispatcher* InputReader::mInputDispatcher = new InputDispatcher();
 
 
 InputReader::~InputReader(void){
-   cout <<"InputReader deconstruct()" << endl;
+    cout <<"InputReader deconstruct()" << endl;
 }
 
 
